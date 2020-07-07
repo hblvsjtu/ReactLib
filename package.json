@@ -16,7 +16,8 @@
         "commit": "npx git-cz",
         "test": "jest --coverage",
         "pretty": "pretty-quick",
-        "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md && git commit --amend --no-edit",
+        "typedoc": "typedoc --out docs --target es5 --theme minimal --mode file src --ignoreCompilerErrors",
+        "genlog": "npm run typedoc && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md docs && git commit --amend --no-edit",
         "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'"
     },
     "dependencies": {
