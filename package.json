@@ -8,11 +8,11 @@
     "author": "hblvsjtu",
     "license": "MIT",
     "requires": true,
-    "main": "index.js",
+    "main": "index.tsx",
     "scripts": {
         "start": "sh ./script/start.sh",
         "dll": "webpack --config ./build/webpack_dll.js",
-        "build": "sh ./script/build.sh",
+        "build": "webpack --config ./build/webpack_prod.js && cp -R ./src/types ./dist/types -f",
         "commit": "npx git-cz",
         "test": "jest --coverage",
         "pretty": "pretty-quick",
@@ -25,12 +25,9 @@
         "@types/lodash": "^4.14.155",
         "@types/react": "^16.9.17",
         "@types/react-dom": "^16.9.4",
-        "@types/react-router-dom": "^5.1.5",
         "core-js": "^3.6.5",
         "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-router-dom": "^5.2.0",
-        "tspaxios": "^0.0.7"
+        "react-dom": "^16.13.1"
     },
     "devDependencies": {
         "@babel/core": "^7.9.6",
@@ -64,6 +61,10 @@
         "mini-css-extract-plugin": "^0.9.0",
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1",
+        "react-router-dom": "^5.2.0",
+        "@types/react-router-dom": "^5.1.5",
+        "classnames": "^2.2.6",
+        "@types/classnames": "^2.2.10",
         "source-map-loader": "^0.2.4",
         "style-loader": "^1.2.1",
         "ts-jest": "^26.1.0",

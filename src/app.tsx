@@ -1,8 +1,8 @@
 import React from "react";
 import { HashRouter as Router, Link, Route } from "react-router-dom";
-import TodoList from "./components/todolist";
+import TodoList from "./components/Todolist";
 import Hello from "./components/Hello/Hello";
-import "./app.less";
+import Tabs from "./components/Tabs";
 
 export default (props: any) => {
     return (
@@ -13,9 +13,13 @@ export default (props: any) => {
             <Link to="/todoList" className="link">
                 TodoList
             </Link>
+            <Link to="/tabs" className="link">
+                Tabs
+            </Link>
             <hr />
             <Route path="/" exact component={Hello}></Route>
             <Route path="/todoList" component={TodoList}></Route>
+            <Route path="/tabs" component={Tabs}></Route>
         </Router>
     );
 };

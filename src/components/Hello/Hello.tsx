@@ -3,7 +3,7 @@
 import * as React from "react";
 import { isArray, isPlainObject } from "lodash";
 import "./Hello.less";
-import axios from "tspaxios";
+import "../../style/variable/index.less";
 
 export interface Props {
     name: string;
@@ -31,7 +31,6 @@ function Hello({ name, enthusiasmLevel = 1 }: Props) {
                     "application/x-www-form-urlencoded;charset=utf-8",
             },
         };
-        const data: any = await axios(option);
     };
 
     return (

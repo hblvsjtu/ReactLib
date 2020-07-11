@@ -5,6 +5,7 @@
  * @Last Modified time: 2020-06-07 15:27:57
  */
 
+const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const merge = require("webpack-merge");
 const webpackCommon = require("./webpack_common");
@@ -16,12 +17,12 @@ const { srcPath, distPath } = require("../config");
 
 module.exports = merge(webpackCommon, {
     mode: "production",
-    output: {
-        filename: "[name].[contentHash:8].js",
-        path: distPath,
-        library: "BindData",
-        libraryTarget: "umd",
-        libraryExport: "default",
+    entry: {
+        main: path.join(srcPath, "index.tsx"),
+    },
+    externals: {
+        react: "React",
+        "react-dom": "ReactDOM",
     },
     module: {
         rules: [

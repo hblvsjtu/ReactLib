@@ -10,13 +10,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { srcPath, distPath } = require("../config");
 
 module.exports = {
-    entry: {
-        main: path.join(srcPath, "index.tsx"),
-    },
     output: {
         filename: "[name].[hash:8].js",
         path: distPath,
-        library: "BindData",
+        library: "ReactLib",
         libraryTarget: "umd",
         libraryExport: "default",
     },
@@ -24,6 +21,9 @@ module.exports = {
         // 针对 Npm 中的第三方模块优先采用 jsnext:main 中指向的 ES6 模块化语法的文件
         mainFields: ["jsnext:main", "browser", "main"],
         extensions: [".ts", ".tsx", ".js", ".jsx"],
+        alias: {
+            components: path.resolve(__dirname, "src/components/"),
+        },
     },
     module: {
         rules: [

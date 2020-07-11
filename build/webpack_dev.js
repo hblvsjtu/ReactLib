@@ -14,6 +14,9 @@ const { proxy, srcPath, distPath, dllFileNames } = require("../config");
 
 module.exports = merge(webpackCommon, {
     mode: "development",
+    entry: {
+        main: path.join(srcPath, "show.tsx"),
+    },
     module: {
         rules: [
             {
