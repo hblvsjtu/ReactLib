@@ -1,3 +1,18 @@
+## 0.0.1 (2020-07-12)
+
+
+### Bug Fixes
+
+* **component filename:** component filename should be upppercase ([81eab59](https://github.com/hblvsjtu/ReactLib/commit/81eab59fe31fdb8b08bacde061538c891d8af2fd))
+
+
+### Features
+
+* **default theme:** default theme and set project structure ([221c872](https://github.com/hblvsjtu/ReactLib/commit/221c872cf8ebb1fecf5b24c40fe7cca142dccdcf))
+* **env:** create env with test ([c9786c3](https://github.com/hblvsjtu/ReactLib/commit/c9786c3f0669d50f40eb7ba73f427be66c7a542f))
+
+
+
 ## 0.0.1 (2020-07-11)
 
 

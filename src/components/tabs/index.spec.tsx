@@ -2,7 +2,7 @@ import React from "react";
 import "jest-enzyme";
 import { configure, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Tabs from "./index";
+import Tabs from "../Tabs";
 
 configure({ adapter: new Adapter() });
 

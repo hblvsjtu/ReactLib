@@ -1,5 +1,5 @@
 import React from "react";
-import Tab from "./tab";
+import Tab from "./Tab";
 
 interface MyState {
     activeIndex: number;
